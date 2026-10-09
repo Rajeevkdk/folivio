@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Folivio",
+    "slug": "folivio",
+    "version": "1.0.0",
+    "scheme": "folivio",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.folivio.mobile",
+      "infoPlist": { "ITSAppUsesNonExemptEncryption": false }
+    },
+    "android": {
+      "package": "app.folivio.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#0C211E",
+        "foregroundImage": "./assets/adaptive-icon.png"
+      },
+      "predictiveBackGestureEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Allow Folivio to unlock your existing session with Face ID."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        { "faceIDPermission": "Allow Folivio to unlock your existing session with Face ID." }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Folivio to select identity documents when secure verification is enabled.",
+          "cameraPermission": "Allow Folivio to photograph identity documents when secure verification is enabled.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 120,
+          "resizeMode": "contain",
+          "backgroundColor": "#0C211E"
+        }
+      ],
+      "expo-font"
+    ]
+  }
+}
+
